@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             val b = v as Button
             newNumber.append(b.text)
         }
-
+//       Setting onClickListeners for number button and dot button
         button0.setOnClickListener(listener)
         button1.setOnClickListener(listener)
         button2.setOnClickListener(listener)
@@ -49,12 +49,14 @@ class MainActivity : AppCompatActivity() {
             operation.text = pendingOperation
         }
 
+//        Setting onClickListeners for operation buttons
         buttonEquals.setOnClickListener(opListener)
         buttonDivide.setOnClickListener(opListener)
         buttonMultiply.setOnClickListener(opListener)
         buttonMinus.setOnClickListener(opListener)
         buttonPlus.setOnClickListener(opListener)
 
+//        Setting onClickListener for neg button
         buttonNeg.setOnClickListener {
             val value = newNumber.text.toString()
             if (value.isEmpty()) {
@@ -71,6 +73,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+//        Setting onClickListener for clear button
         buttonClear.setOnClickListener {
             result.text.clear()
             newNumber.text.clear()
